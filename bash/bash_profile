@@ -1,4 +1,4 @@
-export PATH=/usr/local/sbin:$PATH
+export PATH=/usr/local/sbin:~/bin:$PATH
 export CLICOLOR=1
 export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
 if [[ ${EUID} == 0 ]] ; then
@@ -8,10 +8,9 @@ else
 fi
 
 #Github Token for Homebrew
-export HOMEBREW_GITHUB_API_TOKEN=ef3095229a9a81937f3228e88a2e4e5b930c7c37
+export HOMEBREW_GITHUB_API_TOKEN=7e47c02ebf4c46c094d2253cac6b524cdc59e07a  
 
 # Add path for maven
-export PATH=/Applications/Development/apache-maven-3.3.9/bin:$PATH
 export JAVA_HOME=$(/usr/libexec/java_home)
 
 # env for stage simulation

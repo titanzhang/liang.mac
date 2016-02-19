@@ -3,7 +3,6 @@ autoconf
 automake
 cmake
 curl
-gcc
 libtool
 node
 pkg-config
