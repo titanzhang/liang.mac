@@ -7,8 +7,12 @@ else
     PS1='\[\033[01;32m\]Liang@MBP\[\033[01;34m\] \W \$\[\033[00m\] '
 fi
 
-#Github Token for Homebrew
-export HOMEBREW_GITHUB_API_TOKEN=7e47c02ebf4c46c094d2253cac6b524cdc59e07a  
+# Github Token for Homebrew
+# To break the access number limit from brew to github, we have to assign brew an Github API key.
+# While the token can not save here, or Github would disable that token for security consideration
+if [ -f ~/.brewkey ]; then
+  source ~/.brewkey
+fi
 
 # Add path for maven
 export JAVA_HOME=$(/usr/libexec/java_home)
