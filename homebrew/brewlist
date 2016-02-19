@@ -6,6 +6,5 @@ curl
 gcc
 libtool
 node
-php70
 pkg-config
 wget
