@@ -1,0 +1,5 @@
+[user]
+	name = Liang Zhang
+	email = titanzhang@gmail.com
+[core]
+	excluesfile = /Users/zhangliang/.gitignore.global

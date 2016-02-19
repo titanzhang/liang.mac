@@ -1,0 +1,148 @@
+confdir /usr/local/etc/privoxy
+logdir /usr/local/var/log/privoxy
+#actionsfile match-all.action # Actions that are applied to all sites and maybe overruled later on.
+#actionsfile default.action   # Main actions file
+#actionsfile user.action      # User customizations
+filterfile default.filter
+#filterfile user.filter      # User customizations
+logfile privoxy.log
+#      The available debug levels are:
+#
+#        debug     1 # Log the destination for each request Privoxy let through. See also debug 1024.
+#        debug     2 # show each connection status
+#        debug     4 # show I/O status
+#        debug     8 # show header parsing
+#        debug    16 # log all data written to the network
+#        debug    32 # debug force feature
+#        debug    64 # debug regular expression filters
+#        debug   128 # debug redirects
+#        debug   256 # debug GIF de-animation
+#        debug   512 # Common Log Format
+#        debug  1024 # Log the destination for requests Privoxy didn't let through, and the reason why.
+#        debug  2048 # CGI user interface
+#        debug  4096 # Startup banner and warnings.
+#        debug  8192 # Non-fatal errors
+#        debug 32768 # log all data read from the network
+#        debug 65536 # Log the applying actions
+#
+
+listen-address  0.0.0.0:8118
+
+toggle  1
+enable-remote-toggle  0
+enable-remote-http-toggle  0
+enable-edit-actions 0
+buffer-limit 4096
+forwarded-connect-retries  0
+accept-intercepted-requests 0
+allow-cgi-request-crunching 0
+
+keep-alive-timeout 5
+default-server-timeout 10
+connection-sharing 0
+socket-timeout 30
+
+# forward-socks5 begin
+#
+forward-socks5 .android.com                    127.0.0.1:1080 .
+forward-socks5 .google.com                     127.0.0.1:1080 .
+forward-socks5 .googleapis.com                     127.0.0.1:1080 .
+forward-socks5 .twitter.com                    127.0.0.1:1080 .
+forward-socks5 .twimg.com                127.0.0.1:1080 .
+forward-socks5 .t.co                           127.0.0.1:1080 .
+forward-socks5 .facebook.com                   127.0.0.1:1080 .
+forward-socks5 .facebook.net                   127.0.0.1:1080 .
+forward-socks5 .youtube.com                    127.0.0.1:1080 .
+forward-socks5 .fbcdn.com                      127.0.0.1:1080 .
+forward-socks5 .fbcdn.net                      127.0.0.1:1080 .
+forward-socks5 .ytimg.com                      127.0.0.1:1080 .
+forward-socks5 .stackoverflow.com              127.0.0.1:1080 .
+forward-socks5 .blogspot.com                   127.0.0.1:1080 .
+forward-socks5 .megaupload.com                 127.0.0.1:1080 .
+forward-socks5 .filesonic.com                  127.0.0.1:1080 .
+forward-socks5 .mit.edu                        127.0.0.1:1080 .
+forward-socks5 .mitbbs.com                     127.0.0.1:1080 .
+forward-socks5 .aprs4r.com                     127.0.0.1:1080 .
+forward-socks5 .dropbox.com                    127.0.0.1:1080 .
+forward-socks5 .tvunetworks.com                127.0.0.1:1080 .
+forward-socks5 .essaypedia.com                 127.0.0.1:1080 .
+forward-socks5 .openvpn.net                    127.0.0.1:1080 .
+forward-socks5 .mediafire.com                  127.0.0.1:1080 .
+forward-socks5 .mactechnologies.com            127.0.0.1:1080 .
+forward-socks5 .hamradioscience.com            127.0.0.1:1080 .
+forward-socks5 .f8arr.org            127.0.0.1:1080 .
+forward-socks5 .bit.ly            127.0.0.1:1080 .
+forward-socks5 .wordpress.com            127.0.0.1:1080 .
+forward-socks5 .uploaded.net            127.0.0.1:1080 .
+forward-socks5 .myharmony.com            127.0.0.1:1080 .
+forward-socks5 .privoxy.org            127.0.0.1:1080 .
+forward-socks5 .uavetech.com           127.0.0.1:1080 .
+forward-socks5 .sourceforge.net           127.0.0.1:1080 .
+forward-socks5 .pastebin.com           127.0.0.1:1080 .
+forward-socks5 .shadowsocks.org           127.0.0.1:1080 .
+forward-socks5 .youtu.be           127.0.0.1:1080 .
+forward-socks5 .appspot.com           127.0.0.1:1080 .
+forward-socks5 .googlevideo.com           127.0.0.1:1080 .
+forward-socks5 .dealmoon.com           127.0.0.1:1080 .
+forward-socks5 .dealmoonbbs.com           127.0.0.1:1080 .
+forward-socks5 .tedcdn.com           127.0.0.1:1080 .
+forward-socks5 .gmail.com           127.0.0.1:1080 .
+forward-socks5 .github.com           127.0.0.1:1080 .
+forward-socks5 .ssl.fastly.net           127.0.0.1:1080 .
+forward-socks5 .stack.imgur.com           127.0.0.1:1080 .
+forward-socks5 .nodeschool.io           127.0.0.1:1080 .
+forward-socks5 .npmjs.org           127.0.0.1:1080 .
+forward-socks5 .rockbox.org           127.0.0.1:1080 .
+forward-socks5 .blogger.com           127.0.0.1:1080 .
+forward-socks5 .anythingbutipod.com           127.0.0.1:1080 .
+forward-socks5 .simplehelp.net           127.0.0.1:1080 .
+forward-socks5 .mouser.com           127.0.0.1:1080 .
+forward-socks5 .googleusercontent.com           127.0.0.1:1080 .
+forward-socks5 .gstatic.com           127.0.0.1:1080 .
+forward-socks5 .ggpht.com           127.0.0.1:1080 .
+forward-socks5 .socialpointgames.com           127.0.0.1:1080 .
+forward-socks5 .megaupload.com           127.0.0.1:1080 .
+forward-socks5 .dmv.ca.gov           127.0.0.1:1080 .
+forward-socks5 .carfax.com           127.0.0.1:1080 .
+forward-socks5 .google.com.hk           127.0.0.1:1080 .
+forward-socks5 .wenxuecity.com           127.0.0.1:1080 .
+forward-socks5 .6park.com           127.0.0.1:1080 .
+forward-socks5 .amazonaws.com           127.0.0.1:1080 .
+#forward-socks5 .amazon.com           127.0.0.1:1080 .
+forward-socks5 .mandel-design.xf.cz           127.0.0.1:1080 .
+#forward-socks5 .adobe.com           127.0.0.1:1080 .
+forward-socks5 .fonts.net           127.0.0.1:1080 .
+forward-socks5 .sygic.com           127.0.0.1:1080 .
+forward-socks5 .zendesk.com           127.0.0.1:1080 .
+forward-socks5 .zdassets.com           127.0.0.1:1080 .
+forward-socks5 .tripleaughtdesign.com           127.0.0.1:1080 .
+# Hack for patagonia region detecting
+forward-socks5 .monetate.net           127.0.0.1:1080 .
+forward-socks5 .scu.edu           127.0.0.1:1080 .
+forward-socks5 .csueastbay.edu    127.0.0.1:1080 .
+forward-socks5 .ets.org   127.0.0.1:1080 .
+forward-socks5 .speakerdeck.com   127.0.0.1:1080 .
+forward-socks5 .rrdtool.org   127.0.0.1:1080 .
+forward-socks5 .oetiker.ch    127.0.0.1:1080 .
+forward-socks5 .phpmyadmin.net    127.0.0.1:1080 .
+forward-socks5 .googleapis.com    127.0.0.1:1080 .
+forward-socks5 .att.com    127.0.0.1:1080 .
+forward-socks5 .tmocache.com    127.0.0.1:1080 .
+forward-socks5 .t-mobile.com    127.0.0.1:1080 .
+forward-socks5 .share-byte.net    127.0.0.1:1080 .
+forward-socks5 .cpp.edu    127.0.0.1:1080 .
+# begin cars.com
+forward-socks5 .cars.com    127.0.0.1:1080 .
+forward-socks5 .cstatic-images.com    127.0.0.1:1080 .
+forward-socks5 .optimizely.com    127.0.0.1:1080 .
+forward-socks5 .cstatic-graphics.com    127.0.0.1:1080 .
+forward-socks5 .thebrighttag.com    127.0.0.1:1080 .
+forward-socks5 .collserve.com    127.0.0.1:1080 .
+forward-socks5 .btstatic.com    127.0.0.1:1080 .
+#end cars.com
+forward-socks5 .apple.com    127.0.0.1:1080 .
+
+#
+forward-socks5 .zabbix.com    127.0.0.1:1080 .
+# # forward-socks5 end
+#
