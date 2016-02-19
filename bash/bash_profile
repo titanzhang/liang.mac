@@ -8,8 +8,8 @@ else
 fi
 
 # Github Token for Homebrew
-# To break the access number limit from brew to github, we have to assign brew an Github API key.
-# While the token can not save here, or Github would disable that token for security consideration
+# To break the access number limit from brew to github, we have to assign brew a Github API token.
+# Make sure do NOT push the token to Github, or it would be disabled for security reason.
 if [ -f ~/.brewkey ]; then
   source ~/.brewkey
 fi
