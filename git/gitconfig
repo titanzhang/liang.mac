@@ -1,5 +1,27 @@
 [user]
 	name = Liang Zhang
-	email = titanzhang@gmail.com
+  email = titanzhang@gmail.com
+
 [core]
-	excluesfile = /Users/zhangliang/.gitignore.global
+  excluesfile = /Users/zhangliang/.gitignore.global
+
+[push]
+  default = simple
+
+[difftool "Kaleidoscope"]
+    cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
+
+[difftool]
+  prompt = false
+
+[diff]
+  tool = Kaleidoscope
+
+[mergetool "Kaleidoscope"]
+    cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" \"$REMOTE\"
+
+[mergetool]
+  prompt = false
+
+[merge]
+  tool = Kaleidoscope
