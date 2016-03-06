@@ -4,10 +4,12 @@ COLORDIR = $(HOME)/Library/Application\ Support/Sublime\ Text\ 2/Packages/ColorS
 
 install:
 	ln -s $(PWD)/User/Make.sublime-build $(USERDIR)/C++\ Build.sublime-build
+	ln -s $(PWD)/User/Preferences.sublime-settings $(USERDIR)/Preferences.sublime-settings
 	ln -s $(PWD)/ColorScheme-User $(COLORDIR)
 
 clean:
 	rm -f $(USERDIR)/C++\ Build.sublime-build
+	rm -f $(USERDIR)/Preferences.sublime-settings
 	rm -rf $(COLORDIR)
 
 all: clean install

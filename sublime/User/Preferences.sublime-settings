@@ -1,0 +1,78 @@
+{
+	"color_scheme": "Packages/ColorScheme-User/Tomorrow-Night.tmTheme",
+	"font_options":
+	[
+		"gray_antialias"
+	],
+	"font_size": 16.0,
+	"ignored_packages":
+	[
+		"Vintage"
+	],
+	"long_project_names": true,
+	"maven_env_vars":
+	{
+		"m2_home": "/usr/local"
+	},
+	"maven_menu_commands":
+	[
+		{
+			"args":
+			{
+				"goals":
+				[
+					"test"
+				],
+				"paths":
+				[
+				]
+			},
+			"caption": "Maven: Run test",
+			"command": "maven"
+		},
+		{
+			"args":
+			{
+				"goals":
+				[
+					"install"
+				],
+				"paths":
+				[
+				]
+			},
+			"caption": "Maven: Run install",
+			"command": "maven"
+		},
+		{
+			"args":
+			{
+				"goals":
+				[
+					"clean",
+					"test"
+				],
+				"paths":
+				[
+				]
+			},
+			"caption": "Maven: Run clean test",
+			"command": "maven"
+		},
+		{
+			"args":
+			{
+				"goals":
+				[
+					"clean",
+					"install"
+				],
+				"paths":
+				[
+				]
+			},
+			"caption": "Maven: Run clean install",
+			"command": "maven"
+		}
+	]
+}
