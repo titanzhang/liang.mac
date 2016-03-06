@@ -21,4 +21,7 @@ export JAVA_HOME=$(/usr/libexec/java_home)
 export STG=$HOME/stg
 export DYLD_LIBRARY_PATH=$STG/lib
 
+# env for docker
+eval $(docker-machine env default)
+
 #alias brew="http_proxy=127.0.0.1:8228 https_proxy=127.0.0.1:8228 brew"
