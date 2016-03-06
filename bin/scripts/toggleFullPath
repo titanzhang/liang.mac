@@ -1,0 +1,7 @@
+#!/bin/bash
+SETTING=`defaults read com.apple.finder _FXShowPosixPathInTitle`
+if [ $SETTING = "1" ]; then
+  defaults write com.apple.finder _FXShowPosixPathInTitle -bool false
+else
+  defaults write com.apple.finder _FXShowPosixPathInTitle -bool true
+fi
