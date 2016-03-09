@@ -20,6 +20,7 @@ export JAVA_HOME=$(/usr/libexec/java_home)
 # env for stage simulation
 export STG=$HOME/stg
 export DYLD_LIBRARY_PATH=$STG/lib
+export PATH=$STG/bin:$PATH
 
 # env for docker
 eval $(docker-machine env default)
