@@ -22,7 +22,15 @@ export STG=$HOME/stg
 export DYLD_LIBRARY_PATH=$STG/lib
 export PATH=$STG/bin:$PATH
 
+# env for SimpleScalar
+export PATH=$HOME/simplescalar:$PATH
+
 # env for docker
-eval $(docker-machine env default)
+#eval $(docker-machine env default)
 
 #alias brew="http_proxy=127.0.0.1:8228 https_proxy=127.0.0.1:8228 brew"
+
+# env for Coq
+export COQ_HOME=/Applications/CoqIDE_8.5pl2.app
+export PATH=$COQ_HOME/Contents/Resources/bin:$PATH
+

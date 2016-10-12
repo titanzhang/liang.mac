@@ -19,7 +19,7 @@ set noswapfile
 syntax on
 
 " color scheme
-color ron
+color desert
 
 " 4 spaces as tab
 set tabstop=2
