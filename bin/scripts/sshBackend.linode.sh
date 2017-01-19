@@ -1,10 +1,25 @@
-PID=$(lsof -t -i @localhost:9983 -sTCP:listen)
-CMD='ssh -fN -L 9983:localhost:8983 -L 9306:localhost:3306 backend.liang.center'
+#!/bin/bash
 
-if [ ! -z ${PID} ]
+start() {
+  stop
+  CMD='ssh -fN -L 9983:localhost:8983 -L 9306:localhost:3306 backend.liang.center'
+  echo ${CMD}
+  ${CMD}
+}
+
+stop() {
+  PID=$(lsof -t -i @localhost:9983 -sTCP:listen)
+
+  if [ ! -z ${PID} ]
+  then
+    kill ${PID}
+  fi
+}
+
+ACTION='start'
+if [ ! -z $1 ]
 then
-  kill ${PID}
+  ACTION="$1"
 fi
 
-echo ${CMD}
-${CMD}
+eval ${ACTION}

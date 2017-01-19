@@ -36,3 +36,4 @@ export PATH=$COQ_HOME/Contents/Resources/bin:$PATH
 
 # env for php
 export PATH="$(brew --prefix homebrew/php/php70)/bin:/usr/local/bin:/usr/local/sbin:$PATH"
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi

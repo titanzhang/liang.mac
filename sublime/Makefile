@@ -1,6 +1,6 @@
 PWD = $(shell pwd)
-USERDIR = $(HOME)/Library/Application\ Support/Sublime\ Text\ 2/Packages/User
-COLORDIR = $(HOME)/Library/Application\ Support/Sublime\ Text\ 2/Packages/ColorScheme-User
+USERDIR = $(HOME)/Library/Application\ Support/Sublime\ Text\ 3/Packages/User
+COLORDIR = $(HOME)/Library/Application\ Support/Sublime\ Text\ 3/Packages/ColorScheme-User
 
 install:
 	ln -s $(PWD)/User/Make.sublime-build $(USERDIR)/C++\ Build.sublime-build
