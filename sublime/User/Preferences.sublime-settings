@@ -74,5 +74,6 @@
 			"caption": "Maven: Run clean install",
 			"command": "maven"
 		}
-	]
+	],
+	"tab_size": 2
 }
