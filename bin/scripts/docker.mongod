@@ -1,0 +1,9 @@
+#!/bin/bash
+
+STATUS=$(docker ps -a|grep mongo);
+if [ -n "$STATUS" ]; then
+  docker start mongo
+else
+  docker run --name mongo -d -p 27017:27017 -v ~/dev/mongo.docker/data:/data/db mongo:3.4.2
+fi
+
