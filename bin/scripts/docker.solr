@@ -1,9 +1,0 @@
-#!/bin/bash
-
-STATUS=$(docker ps -a|grep solr);
-if [ -n "$STATUS" ]; then
-  docker start solr
-else
-  docker run --name solr -d -p 8983:8983 -v ~/dev/solr.docker/revjs:/solr_home -e SOLR_HOME=/solr_home solr:6.4.1
-fi
-

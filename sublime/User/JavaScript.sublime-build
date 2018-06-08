@@ -1,5 +1,4 @@
 {
 	"cmd": ["node", "--inspect", "$file"],
 	"selector": "source.js",
-  "path": "/usr/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin"
 }

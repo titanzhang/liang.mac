@@ -2,7 +2,7 @@
 
 start() {
   stop
-  CMD='ssh -fN -L 9983:localhost:8983 -L 9306:localhost:3306 -L 29017:localhost:27017 backend.liangzhang.io'
+  CMD='ssh -fN -L 9983:solr.aws:8983 ec2-user@aws.liangzhang.io'
   echo ${CMD}
   ${CMD}
 }

@@ -1,0 +1,4 @@
+{
+	"cmd": ["latexmk", "-pdf", "$file"],
+	"selector": "source.tex"
+}
