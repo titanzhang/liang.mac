@@ -15,15 +15,15 @@ if [ -f ~/.brewkey ]; then
 fi
 
 # Add path for maven
-export JAVA_HOME=$(/usr/libexec/java_home)
+#export JAVA_HOME=$(/usr/libexec/java_home)
 
 # env for stage simulation
-export STG=$HOME/stg
-export DYLD_LIBRARY_PATH=$STG/lib
-export PATH=$STG/bin:$PATH
+#export STG=$HOME/stg
+#export DYLD_LIBRARY_PATH=$STG/lib
+#export PATH=$STG/bin:$PATH
 
 # env for SimpleScalar
-export PATH=$HOME/simplescalar:$PATH
+#export PATH=$HOME/simplescalar:$PATH
 
 # env for docker
 #eval $(docker-machine env default)
@@ -31,19 +31,19 @@ export PATH=$HOME/simplescalar:$PATH
 #alias brew="http_proxy=127.0.0.1:8228 https_proxy=127.0.0.1:8228 brew"
 
 # env for Coq
-export COQ_HOME=/Applications/CoqIDE_8.5pl2.app
-export PATH=$COQ_HOME/Contents/Resources/bin:$PATH
+#export COQ_HOME=/Applications/CoqIDE_8.5pl2.app
+#export PATH=$COQ_HOME/Contents/Resources/bin:$PATH
 
 # env for php
-export PATH="$(brew --prefix homebrew/php/php70)/bin:/usr/local/bin:/usr/local/sbin:$PATH"
-if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+#export PATH="$(brew --prefix homebrew/php/php70)/bin:/usr/local/bin:/usr/local/sbin:$PATH"
+#if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 #env for python version selection
-eval "$(pyenv init -)"
-export PYTHON_CONFIGURE_OPTS="--enable-framework"
+#eval "$(pyenv init -)"
+#export PYTHON_CONFIGURE_OPTS="--enable-framework"
 
 # env for Android Studio
-export PATH=~/Library/Android/sdk/platform-tools:$PATH
+#export PATH=~/Library/Android/sdk/platform-tools:$PATH
 
 # LaTeX
 #alias pdflatex="docker.latex pdflatex"
